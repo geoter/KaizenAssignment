@@ -8,11 +8,11 @@
 import Foundation
 
 protocol SportsGamesDataFactoryProtocol {
-    func makeBinder(from models: [SportModel]) -> [BinderModelConformer]
+    func makeBinders(from models: [SportModel]) -> [BinderModelConformer]
 }
 
 final class SportsGamesDataFactory: SportsGamesDataFactoryProtocol {
-    func makeBinder(from models: [SportModel]) -> [BinderModelConformer] {
+    func makeBinders(from models: [SportModel]) -> [BinderModelConformer] {
         []
     }
 }

@@ -35,6 +35,7 @@
 		62998A1328CCEA7D002E9DAE /* BinderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62998A1028CCEA7C002E9DAE /* BinderModel.swift */; };
 		62998A1428CCEA7D002E9DAE /* BinderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62998A1128CCEA7C002E9DAE /* BinderCell.swift */; };
 		62998A1A28CCEBBA002E9DAE /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62998A1928CCEBBA002E9DAE /* UITableViewExtensions.swift */; };
+		62998A1C28CCF17F002E9DAE /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62998A1B28CCF17F002E9DAE /* State.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		62998A1028CCEA7C002E9DAE /* BinderModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinderModel.swift; sourceTree = "<group>"; };
 		62998A1128CCEA7C002E9DAE /* BinderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinderCell.swift; sourceTree = "<group>"; };
 		62998A1928CCEBBA002E9DAE /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
+		62998A1B28CCF17F002E9DAE /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,7 +159,6 @@
 			children = (
 				622C4C4528CCD0CD00D39601 /* Files */,
 				622C4C4228CCD06D00D39601 /* Common */,
-				622C4C2828CCB4B800D39601 /* UITests */,
 				622C4C2728CCB4AE00D39601 /* Integration Tests */,
 				622C4C2628CCB49C00D39601 /* Unit Tests */,
 			);
@@ -186,13 +187,6 @@
 			children = (
 			);
 			path = "Integration Tests";
-			sourceTree = "<group>";
-		};
-		622C4C2828CCB4B800D39601 /* UITests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UITests;
 			sourceTree = "<group>";
 		};
 		622C4C2B28CCB4F100D39601 /* Model */ = {
@@ -282,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				62998A0E28CCEA74002E9DAE /* Binders */,
+				62998A1B28CCF17F002E9DAE /* State.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -450,6 +445,7 @@
 				622C4C3428CCB7FE00D39601 /* NetworkError.swift in Sources */,
 				622C4C2D28CCB50100D39601 /* Network.swift in Sources */,
 				622C4C3928CCC4CC00D39601 /* NetworkConfig.swift in Sources */,
+				62998A1C28CCF17F002E9DAE /* State.swift in Sources */,
 				62998A1228CCEA7D002E9DAE /* BinderDataSource.swift in Sources */,
 				622C4BF928CCB34600D39601 /* SceneDelegate.swift in Sources */,
 				62998A0A28CCE9C8002E9DAE /* SportsGamesDataFactory.swift in Sources */,
