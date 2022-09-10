@@ -44,7 +44,8 @@ class NetworkTests: XCTestCase {
     
     func testNoInternetErrorSuccess() {
         let reachability = ReachabilityMock(hasInternet: false)
-        let config = NetworkConfig(scheme: "https", host: "618d3aa7fe09aa001744060a.mockapi.io", reachability: reachability)
+        let config = NetworkConfig(scheme: "https", host: "618d3aa7fe09aa001744060a.mockapi.io",
+                                   reachability: reachability, session: .shared)
         let network = Network(config:config)
         let request = SportsRequest()
         

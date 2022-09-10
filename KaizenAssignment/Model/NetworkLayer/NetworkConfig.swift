@@ -11,4 +11,5 @@ struct NetworkConfig {
     let scheme: String
     let host: String
     let reachability: Reachability
+    let session: URLSession
 }

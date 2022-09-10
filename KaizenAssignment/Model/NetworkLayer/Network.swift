@@ -8,22 +8,24 @@
 import Foundation
 
 protocol NetworkProtocol {
-    func sendRequest<Request: Requestable>(request: Request, completion: @escaping (Result<Request.ResponseType, NetworkError>) -> Void, session: URLSession, jsonDecoder: JSONDecoder)
+    var config: NetworkConfig { get }
+    func sendRequest<Request: Requestable>(request: Request, completion: @escaping (Result<Request.ResponseType, NetworkError>) -> Void)
 }
 
 final class Network: NetworkProtocol {
     static let shared: Network = {
-        let config = NetworkConfig(scheme: "https", host: "618d3aa7fe09aa001744060a.mockapi.io", reachability: .shared)
+        let config = NetworkConfig(scheme: "https", host: "618d3aa7fe09aa001744060a.mockapi.io",
+                                   reachability: .shared, session: .shared)
         return Network(config: config)
     }()
     
-    private let config: NetworkConfig
+    private(set) var config: NetworkConfig
     
     init(config: NetworkConfig) {
         self.config = config
     }
     
-    func sendRequest<Request: Requestable>(request: Request, completion: @escaping (Result<Request.ResponseType, NetworkError>) -> Void, session: URLSession = .shared, jsonDecoder: JSONDecoder = JSONDecoder()) {
+    func sendRequest<Request: Requestable>(request: Request, completion: @escaping (Result<Request.ResponseType, NetworkError>) -> Void) {
         guard config.reachability.hasInternetConnection else {
             completion(.failure(.noInternet))
             return
@@ -33,13 +35,13 @@ final class Network: NetworkProtocol {
             completion(.failure(.invalidPath(request.path)))
             return
         }
-        
+        let jsonDecoder = JSONDecoder()
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = request.method.rawValue
         urlRequest.cachePolicy = .reloadIgnoringLocalCacheData
         urlRequest.timeoutInterval = 20.0
         
-        let task = session.dataTask(with: urlRequest) { data, response, error in
+        let task = config.session.dataTask(with: urlRequest) { data, response, error in
             guard error == nil else {
                 completion(.failure(.requestFailed(request.path, error?.localizedDescription)))
                 return
