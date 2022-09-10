@@ -29,6 +29,12 @@
 		622C4C4728CCD38200D39601 /* sports_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 622C4C4628CCD38200D39601 /* sports_response.json */; };
 		622C4C4928CCDFE100D39601 /* sports_response_malformed.json in Resources */ = {isa = PBXBuildFile; fileRef = 622C4C4828CCDFE100D39601 /* sports_response_malformed.json */; };
 		622C4C4D28CCE5F500D39601 /* InvalidPathRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622C4C4C28CCE5F500D39601 /* InvalidPathRequest.swift */; };
+		62998A0A28CCE9C8002E9DAE /* SportsGamesDataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62998A0928CCE9C8002E9DAE /* SportsGamesDataFactory.swift */; };
+		62998A0C28CCE9DC002E9DAE /* SportsGamesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62998A0B28CCE9DC002E9DAE /* SportsGamesViewModel.swift */; };
+		62998A1228CCEA7D002E9DAE /* BinderDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62998A0F28CCEA7C002E9DAE /* BinderDataSource.swift */; };
+		62998A1328CCEA7D002E9DAE /* BinderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62998A1028CCEA7C002E9DAE /* BinderModel.swift */; };
+		62998A1428CCEA7D002E9DAE /* BinderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62998A1128CCEA7C002E9DAE /* BinderCell.swift */; };
+		62998A1A28CCEBBA002E9DAE /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62998A1928CCEBBA002E9DAE /* UITableViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +81,12 @@
 		622C4C4628CCD38200D39601 /* sports_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sports_response.json; sourceTree = "<group>"; };
 		622C4C4828CCDFE100D39601 /* sports_response_malformed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sports_response_malformed.json; sourceTree = "<group>"; };
 		622C4C4C28CCE5F500D39601 /* InvalidPathRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvalidPathRequest.swift; sourceTree = "<group>"; };
+		62998A0928CCE9C8002E9DAE /* SportsGamesDataFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsGamesDataFactory.swift; sourceTree = "<group>"; };
+		62998A0B28CCE9DC002E9DAE /* SportsGamesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsGamesViewModel.swift; sourceTree = "<group>"; };
+		62998A0F28CCEA7C002E9DAE /* BinderDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinderDataSource.swift; sourceTree = "<group>"; };
+		62998A1028CCEA7C002E9DAE /* BinderModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinderModel.swift; sourceTree = "<group>"; };
+		62998A1128CCEA7C002E9DAE /* BinderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinderCell.swift; sourceTree = "<group>"; };
+		62998A1928CCEBBA002E9DAE /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +137,9 @@
 		622C4BF528CCB34600D39601 /* KaizenAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				62998A1528CCEB87002E9DAE /* Extensions */,
+				62998A0D28CCEA47002E9DAE /* Common */,
+				62998A0728CCE98E002E9DAE /* ViewModel */,
 				622C4C2B28CCB4F100D39601 /* Model */,
 				622C4BF628CCB34600D39601 /* AppDelegate.swift */,
 				622C4BF828CCB34600D39601 /* SceneDelegate.swift */,
@@ -244,6 +259,49 @@
 				622C4C4628CCD38200D39601 /* sports_response.json */,
 			);
 			path = Files;
+			sourceTree = "<group>";
+		};
+		62998A0728CCE98E002E9DAE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				62998A0828CCE9AD002E9DAE /* SportsGames */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		62998A0828CCE9AD002E9DAE /* SportsGames */ = {
+			isa = PBXGroup;
+			children = (
+				62998A0928CCE9C8002E9DAE /* SportsGamesDataFactory.swift */,
+				62998A0B28CCE9DC002E9DAE /* SportsGamesViewModel.swift */,
+			);
+			path = SportsGames;
+			sourceTree = "<group>";
+		};
+		62998A0D28CCEA47002E9DAE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				62998A0E28CCEA74002E9DAE /* Binders */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		62998A0E28CCEA74002E9DAE /* Binders */ = {
+			isa = PBXGroup;
+			children = (
+				62998A1128CCEA7C002E9DAE /* BinderCell.swift */,
+				62998A0F28CCEA7C002E9DAE /* BinderDataSource.swift */,
+				62998A1028CCEA7C002E9DAE /* BinderModel.swift */,
+			);
+			path = Binders;
+			sourceTree = "<group>";
+		};
+		62998A1528CCEB87002E9DAE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				62998A1928CCEBBA002E9DAE /* UITableViewExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -384,11 +442,17 @@
 				622C4BFB28CCB34600D39601 /* ViewController.swift in Sources */,
 				622C4C3C28CCC68400D39601 /* SportsRequest.swift in Sources */,
 				622C4BF728CCB34600D39601 /* AppDelegate.swift in Sources */,
+				62998A1328CCEA7D002E9DAE /* BinderModel.swift in Sources */,
+				62998A0C28CCE9DC002E9DAE /* SportsGamesViewModel.swift in Sources */,
+				62998A1A28CCEBBA002E9DAE /* UITableViewExtensions.swift in Sources */,
 				622C4C2F28CCB51600D39601 /* Request.swift in Sources */,
+				62998A1428CCEA7D002E9DAE /* BinderCell.swift in Sources */,
 				622C4C3428CCB7FE00D39601 /* NetworkError.swift in Sources */,
 				622C4C2D28CCB50100D39601 /* Network.swift in Sources */,
 				622C4C3928CCC4CC00D39601 /* NetworkConfig.swift in Sources */,
+				62998A1228CCEA7D002E9DAE /* BinderDataSource.swift in Sources */,
 				622C4BF928CCB34600D39601 /* SceneDelegate.swift in Sources */,
+				62998A0A28CCE9C8002E9DAE /* SportsGamesDataFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
