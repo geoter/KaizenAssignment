@@ -11,7 +11,15 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        let request = SportsRequest()
+        Network.shared.sendRequest(request: request) { result in
+            switch result {
+            case .success(let response):
+                print(response.first)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
 
 
