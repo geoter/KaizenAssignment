@@ -64,24 +64,6 @@ class NetworkTests: XCTestCase {
         wait(for: [expectation], timeout: 3.0)
     }
     
-    func testNoInternetErrorFailure() {
-        let reachability = ReachabilityMock(hasInternet: true)
-        let config = NetworkConfig(scheme: "https", host: "618d3aa7fe09aa001744060a.mockapi.io", reachability: reachability)
-        let network = Network(config:config)
-        let request = SportsRequest()
-        
-        let expectation = XCTestExpectation(description: "Network request: No internet")
-        
-        network.sendRequest(request: request) { result in
-            defer { expectation.fulfill() }
-            guard case let .success(sports) = result else {
-                XCTFail("Request should succeed")
-                return
-            }
-        }
-        wait(for: [expectation], timeout: 3.0)
-    }
-    
     func testInvalidURLPath() throws {
         let network = Network.shared
         let request = InvalidPathRequest()
