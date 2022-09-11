@@ -44,6 +44,8 @@
 		62D8D21828CE01A50087AE9B /* SportEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D8D21728CE01A50087AE9B /* SportEventsViewController.swift */; };
 		62D8D21A28CE07DF0087AE9B /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D8D21928CE07DF0087AE9B /* UINavigationControllerExtension.swift */; };
 		62D8D21C28CE0A660087AE9B /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D8D21B28CE0A660087AE9B /* UIColorExtensions.swift */; };
+		62D8D22128CE1A210087AE9B /* SportsGamesViewModel_IntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D8D22028CE1A210087AE9B /* SportsGamesViewModel_IntegrationTests.swift */; };
+		62D8D22328CE1E5E0087AE9B /* SportsGamesDataFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D8D22228CE1E5E0087AE9B /* SportsGamesDataFactoryTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +107,8 @@
 		62D8D21728CE01A50087AE9B /* SportEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportEventsViewController.swift; sourceTree = "<group>"; };
 		62D8D21928CE07DF0087AE9B /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
 		62D8D21B28CE0A660087AE9B /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		62D8D22028CE1A210087AE9B /* SportsGamesViewModel_IntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsGamesViewModel_IntegrationTests.swift; sourceTree = "<group>"; };
+		62D8D22228CE1E5E0087AE9B /* SportsGamesDataFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsGamesDataFactoryTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +198,7 @@
 		622C4C2628CCB49C00D39601 /* Unit Tests */ = {
 			isa = PBXGroup;
 			children = (
+				62D8D21D28CE19950087AE9B /* ViewModels */,
 				622C4C3028CCB64E00D39601 /* Network */,
 			);
 			path = "Unit Tests";
@@ -202,6 +207,7 @@
 		622C4C2728CCB4AE00D39601 /* Integration Tests */ = {
 			isa = PBXGroup;
 			children = (
+				62D8D22028CE1A210087AE9B /* SportsGamesViewModel_IntegrationTests.swift */,
 			);
 			path = "Integration Tests";
 			sourceTree = "<group>";
@@ -353,6 +359,14 @@
 				62D8D21728CE01A50087AE9B /* SportEventsViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		62D8D21D28CE19950087AE9B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				62D8D22228CE1E5E0087AE9B /* SportsGamesDataFactoryTests.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -523,6 +537,8 @@
 				622C4C4128CCCFFB00D39601 /* ReachabilityMock.swift in Sources */,
 				622C4C4D28CCE5F500D39601 /* InvalidPathRequest.swift in Sources */,
 				622C4C4428CCD07800D39601 /* FileReader.swift in Sources */,
+				62D8D22328CE1E5E0087AE9B /* SportsGamesDataFactoryTests.swift in Sources */,
+				62D8D22128CE1A210087AE9B /* SportsGamesViewModel_IntegrationTests.swift in Sources */,
 				622C4C2A28CCB4E000D39601 /* NetworkTests.swift in Sources */,
 				622C4C3228CCB65D00D39601 /* NetworkMock.swift in Sources */,
 			);

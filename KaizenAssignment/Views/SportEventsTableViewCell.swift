@@ -14,7 +14,6 @@ final class SportEventsTableViewCell: BinderCell {
     }
     
     override func setup(with data: BinderModelConformer) {
-        guard let model = data as? SportHeaderBinderModel else { return }
-        
+        guard let model = data as? SportEventsBinderModel else { return }
     }
 }

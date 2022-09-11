@@ -10,6 +10,7 @@ import Foundation
 protocol SportsGamesDataFactoryProtocol {
     func makeBinders(from models: [SportModel]?) -> [BinderModelConformer]
     func toggleCollapse(for model: SportHeaderBinderModel)
+    func isCollapsed(model: SportHeaderBinderModel) -> Bool
 }
 
 final class SportsGamesDataFactory: SportsGamesDataFactoryProtocol {
@@ -30,12 +31,20 @@ final class SportsGamesDataFactory: SportsGamesDataFactoryProtocol {
         }
         return binderModels
     }
-    
+}
+
+//MARK: - Expand Collapse
+
+extension SportsGamesDataFactory {
     func toggleCollapse(for model: SportHeaderBinderModel) {
         guard collapsedSports.contains(model.sportID) else {
             collapsedSports.insert(model.sportID)
             return
         }
         collapsedSports.remove(model.sportID)
+    }
+    
+    func isCollapsed(model: SportHeaderBinderModel) -> Bool {
+        collapsedSports.contains(model.sportID)
     }
 }
