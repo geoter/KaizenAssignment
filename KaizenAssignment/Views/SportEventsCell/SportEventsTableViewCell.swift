@@ -70,7 +70,7 @@ extension SportEventsTableViewCell: UICollectionViewDataSource, UICollectionView
 
 extension SportEventsTableViewCell: SportEventCollectionViewCellDelegate {
     func sportEventFavoriteToggle(model: SportEventBinderModel) {
-        gamesCollectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .left, animated: true)
+        gamesCollectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .left, animated: false)
         delegate?.sportEventsFavoriteToggle(eventID: model.eventID)
     }
 }
