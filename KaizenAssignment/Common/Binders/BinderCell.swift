@@ -22,9 +22,17 @@ struct BinderCellType {
         identifier = cell.cellIdentifier
         nibName = cell.nibIdentifier
     }
+    
+    ///Use this init when a cell should be reused only by those with the uniqueIdentifier specified
+    init(_ cell: BinderCell.Type, uniqueIdentifier: String){
+        cellType = cell.type
+        identifier = uniqueIdentifier
+        nibName = cell.nibIdentifier
+    }
 }
 
 class BinderCell: UITableViewCell, BinderCellConformer {
+    var uniqueCellIdentifier: String?
     func setup(with data: BinderModelConformer) {}
     static var type: String {
         return String(describing: Self.self)

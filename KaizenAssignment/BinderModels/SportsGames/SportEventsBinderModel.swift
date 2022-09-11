@@ -8,6 +8,7 @@
 import Foundation
 
 struct SportEventsBinderModel {
+    let sportID: String
     let events: [SportEventBinderModel]
 }
 
@@ -16,6 +17,7 @@ struct SportEventBinderModel {
     let sportID: String
     let caption: String
     let eventStartTimestamp: Int
+    let isFavorite: Bool
     
     var homeCompetitor: String? {
         caption.components(separatedBy: "-").first
@@ -28,6 +30,6 @@ struct SportEventBinderModel {
 
 extension SportEventsBinderModel: BinderModelConformer {
     func getCellType() -> BinderCellType {
-        BinderCellType(SportEventsTableViewCell.self)
+        BinderCellType(SportEventsTableViewCell.self, uniqueIdentifier: sportID)
     }
 }

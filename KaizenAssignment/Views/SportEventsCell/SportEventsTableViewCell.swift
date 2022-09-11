@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol SportEventsTableViewCellDelegate: AnyObject {
+    func sportEventsFavoriteToggle(eventID: String)
+}
+
 final class SportEventsTableViewCell: BinderCell {
+    weak var delegate: SportEventsTableViewCellDelegate?
+    
     @IBOutlet private var gamesCollectionView: UICollectionView!
     private var binderModel: SportEventsBinderModel?
     
@@ -54,9 +60,17 @@ extension SportEventsTableViewCell: UICollectionViewDataSource, UICollectionView
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SportEventCollectionViewCell.cellIdentifier, for: indexPath) as! SportEventCollectionViewCell
         guard indexPath.row < events.count else { return cell }
         cell.setup(with:events[indexPath.row])
+        cell.delegate = self
        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    }
+}
+
+extension SportEventsTableViewCell: SportEventCollectionViewCellDelegate {
+    func sportEventFavoriteToggle(model: SportEventBinderModel) {
+        gamesCollectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .left, animated: true)
+        delegate?.sportEventsFavoriteToggle(eventID: model.eventID)
     }
 }

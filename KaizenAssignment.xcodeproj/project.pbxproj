@@ -49,6 +49,7 @@
 		62D8D21C28CE0A660087AE9B /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D8D21B28CE0A660087AE9B /* UIColorExtensions.swift */; };
 		62D8D22128CE1A210087AE9B /* SportsGamesViewModel_IntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D8D22028CE1A210087AE9B /* SportsGamesViewModel_IntegrationTests.swift */; };
 		62D8D22328CE1E5E0087AE9B /* SportsGamesDataFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D8D22228CE1E5E0087AE9B /* SportsGamesDataFactoryTests.swift */; };
+		62EF7F3028CE3CF2004D170F /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EF7F2F28CE3CF2004D170F /* UIViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +116,7 @@
 		62D8D21B28CE0A660087AE9B /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		62D8D22028CE1A210087AE9B /* SportsGamesViewModel_IntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsGamesViewModel_IntegrationTests.swift; sourceTree = "<group>"; };
 		62D8D22228CE1E5E0087AE9B /* SportsGamesDataFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsGamesDataFactoryTests.swift; sourceTree = "<group>"; };
+		62EF7F2F28CE3CF2004D170F /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -328,6 +330,7 @@
 				62D8D21928CE07DF0087AE9B /* UINavigationControllerExtension.swift */,
 				62D8D21B28CE0A660087AE9B /* UIColorExtensions.swift */,
 				62C955A928CE2EFD002782B3 /* UICollectionViewExtensions.swift */,
+				62EF7F2F28CE3CF2004D170F /* UIViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -544,6 +547,7 @@
 				62D8D20B28CDF7E20087AE9B /* SportHeaderBinderModel.swift in Sources */,
 				62C955AA28CE2EFD002782B3 /* UICollectionViewExtensions.swift in Sources */,
 				62998A1228CCEA7D002E9DAE /* BinderDataSource.swift in Sources */,
+				62EF7F3028CE3CF2004D170F /* UIViewExtension.swift in Sources */,
 				62D8D21828CE01A50087AE9B /* SportEventsViewController.swift in Sources */,
 				62D8D20728CDF0DB0087AE9B /* Assets.swift in Sources */,
 				62998A0A28CCE9C8002E9DAE /* SportsGamesDataFactory.swift in Sources */,

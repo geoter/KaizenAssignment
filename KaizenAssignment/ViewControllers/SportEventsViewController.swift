@@ -46,8 +46,22 @@ extension SportEventsViewController: SportsGamesViewModelDelegate {
 }
 
 extension SportEventsViewController: BinderDataSourceDelegate {
+    func binderDatasource(_ tableView: UITableView, cellCreated: CellInstanceData) {
+        switch cellCreated.cell {
+        case let cell as SportEventsTableViewCell:
+            cell.delegate = self
+        default: return
+        }
+    }
+    
     func binderDataSource(_ tableView: UITableView, didSelect model: BinderModelConformer) {
         guard let headerModel = model as? SportHeaderBinderModel else { return }
         viewModel.toggleCollapse(for: headerModel)
+    }
+}
+
+extension SportEventsViewController: SportEventsTableViewCellDelegate {
+    func sportEventsFavoriteToggle(eventID: String) {
+        viewModel.toggleFavorite(for: eventID)
     }
 }

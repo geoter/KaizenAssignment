@@ -8,7 +8,10 @@
 import Foundation
 import UIKit
 
+typealias CellInstanceData = (cell: UITableViewCell, indexPath: IndexPath)
+
 protocol BinderDataSourceDelegate: AnyObject {
+    func binderDatasource(_ tableView: UITableView, cellCreated: CellInstanceData)
     func binderDataSource(_ tableView: UITableView, didSelect model: BinderModelConformer)
 }
 
@@ -46,6 +49,7 @@ final class BinderDataSource: NSObject, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = computeCell(tableView: tableView, indexPath: indexPath)
         cell.setup(with: dataList[indexPath.row])
+        binderDelegate?.binderDatasource(tableView, cellCreated: (cell, indexPath))
         return cell
     }
     

@@ -25,6 +25,14 @@ enum Assets {
         UIImage(named: "arrow-up-template")
     }
     
+    static var starFilledIcon: UIImage? {
+        UIImage(named: "star-filled-template")
+    }
+    
+    static var starEmptyIcon: UIImage? {
+        UIImage(named: "star-empty-template")
+    }
+    
     static func icon(for sport: String) -> UIImage? {
         var iconImage: String!
         switch SportsIcons(rawValue: sport) {

@@ -11,10 +11,13 @@ protocol SportsGamesDataFactoryProtocol {
     func makeBinders(from models: [SportModel]?) -> [BinderModelConformer]
     func toggleCollapse(for model: SportHeaderBinderModel)
     func isCollapsed(model: SportHeaderBinderModel) -> Bool
+    func toggleFavorites(for eventID: String)
+    func isFavorite(eventID: String) -> Bool
 }
 
 final class SportsGamesDataFactory: SportsGamesDataFactoryProtocol {
     private var collapsedSports = Set<String>()
+    private var favoriteEvents = Set<String>()
     
     func makeBinders(from models: [SportModel]?) -> [BinderModelConformer] {
         var binderModels = [BinderModelConformer]()
@@ -28,10 +31,19 @@ final class SportsGamesDataFactory: SportsGamesDataFactoryProtocol {
             binderModels.append(headerBinderModel)
             guard isCollapsed == false else { return }
             //Events
-            let eventBindelModels = model.events.map { event in
-                SportEventBinderModel(eventID: event.eventId, sportID: event.sportId, caption: event.eventName, eventStartTimestamp: event.eventStartTimestamp)
+            ///show Favorites first in the list
+            var favoriteBinderModels: [SportEventBinderModel] = []
+            var normalBinderModels: [SportEventBinderModel] = []
+            model.events.forEach { event in
+                let isFavorite = isFavorite(eventID: event.eventId)
+                let binderModel = SportEventBinderModel(eventID: event.eventId, sportID: event.sportId, caption: event.eventName, eventStartTimestamp: event.eventStartTimestamp, isFavorite: isFavorite)
+                guard isFavorite else {
+                    normalBinderModels.append(binderModel)
+                    return
+                }
+                favoriteBinderModels.append(binderModel)
             }
-            let sportEventsBinderModels = SportEventsBinderModel(events: eventBindelModels)
+            let sportEventsBinderModels = SportEventsBinderModel(sportID: model.sportId, events: favoriteBinderModels + normalBinderModels)
             binderModels.append(sportEventsBinderModels)
         }
         return binderModels
@@ -51,5 +63,21 @@ extension SportsGamesDataFactory {
     
     func isCollapsed(model: SportHeaderBinderModel) -> Bool {
         collapsedSports.contains(model.sportID)
+    }
+}
+
+//MARK: - Favorites
+
+extension SportsGamesDataFactory {
+    func toggleFavorites(for eventID: String) {
+        guard favoriteEvents.contains(eventID) else {
+            favoriteEvents.insert(eventID)
+            return
+        }
+        favoriteEvents.remove(eventID)
+    }
+    
+    func isFavorite(eventID: String) -> Bool {
+        favoriteEvents.contains(eventID)
     }
 }

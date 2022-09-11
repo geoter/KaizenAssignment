@@ -61,6 +61,12 @@ final class SportsGamesViewModel: SportsGamesViewModelProtocol {
         state = .loaded(binders)
     }
     
+    func toggleFavorite(for eventID: String) {
+        dataFactory.toggleFavorites(for: eventID)
+        let binders = dataFactory.makeBinders(from: self.models)
+        state = .loaded(binders)
+    }
+    
     //MARK: - Private
     
     private func processResponse(models: [SportModel]) {

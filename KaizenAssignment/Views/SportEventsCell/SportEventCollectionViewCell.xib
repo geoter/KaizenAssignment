@@ -12,26 +12,26 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SportEventCollectionViewCell" customModule="KaizenAssignment" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="274" height="154"/>
+            <rect key="frame" x="0.0" y="0.0" width="140" height="145"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="274" height="154"/>
+                <rect key="frame" x="0.0" y="0.0" width="140" height="145"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aib-nD-SDK">
-                        <rect key="frame" x="0.0" y="0.0" width="274" height="154"/>
+                        <rect key="frame" x="0.0" y="0.0" width="140" height="145"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hz6-Ia-An8">
-                                <rect key="frame" x="8" y="95" width="258" height="44"/>
+                                <rect key="frame" x="8" y="86" width="124" height="44"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBy-5D-XhH">
-                                        <rect key="frame" x="109.5" y="0.0" width="39.5" height="19.5"/>
+                                        <rect key="frame" x="42.5" y="0.0" width="39.5" height="19.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vf3-ay-586">
-                                        <rect key="frame" x="109.5" y="24.5" width="39.5" height="19.5"/>
+                                        <rect key="frame" x="42.5" y="24.5" width="39.5" height="19.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -39,16 +39,20 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uA2-X2-vBp">
-                                <rect key="frame" x="117.5" y="15" width="39.5" height="19.5"/>
+                                <rect key="frame" x="50.5" y="15" width="39.5" height="19.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZG-Yc-bWs">
-                                <rect key="frame" x="126" y="44.5" width="22" height="40.5"/>
+                                <rect key="frame" x="57.5" y="44.5" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="MKu-Mb-q6T"/>
+                                    <constraint firstAttribute="height" constant="25" id="hA6-VH-yG3"/>
+                                </constraints>
                                 <color key="tintColor" systemColor="systemYellowColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="star.fill" catalog="system"/>
+                                <state key="normal" backgroundImage="star-filled-template"/>
                                 <connections>
                                     <action selector="favoritedTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="E8N-yV-cAQ"/>
                                 </connections>
@@ -60,7 +64,8 @@
                             <constraint firstItem="uA2-X2-vBp" firstAttribute="top" secondItem="aib-nD-SDK" secondAttribute="top" constant="15" id="8TK-mT-AVe"/>
                             <constraint firstAttribute="bottom" secondItem="hz6-Ia-An8" secondAttribute="bottom" constant="15" id="I1z-Tg-2vd"/>
                             <constraint firstItem="gZG-Yc-bWs" firstAttribute="centerX" secondItem="aib-nD-SDK" secondAttribute="centerX" id="Iao-LH-Sae"/>
-                            <constraint firstItem="hz6-Ia-An8" firstAttribute="top" secondItem="gZG-Yc-bWs" secondAttribute="bottom" constant="10" id="d1C-P8-CWv"/>
+                            <constraint firstAttribute="width" priority="999" constant="140" id="Ls8-1h-KJa"/>
+                            <constraint firstItem="hz6-Ia-An8" firstAttribute="top" relation="greaterThanOrEqual" secondItem="gZG-Yc-bWs" secondAttribute="bottom" constant="10" id="d1C-P8-CWv"/>
                             <constraint firstItem="hz6-Ia-An8" firstAttribute="leading" secondItem="aib-nD-SDK" secondAttribute="leading" constant="8" id="qgE-nv-rJj"/>
                             <constraint firstItem="uA2-X2-vBp" firstAttribute="centerX" secondItem="aib-nD-SDK" secondAttribute="centerX" id="quZ-XF-noo"/>
                             <constraint firstItem="gZG-Yc-bWs" firstAttribute="top" secondItem="uA2-X2-vBp" secondAttribute="bottom" constant="10" id="ydH-5o-8Eg"/>
@@ -75,17 +80,19 @@
                 <constraint firstItem="aib-nD-SDK" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="oI3-OL-939"/>
                 <constraint firstItem="aib-nD-SDK" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="unq-T9-SRK"/>
             </constraints>
-            <size key="customSize" width="274" height="154"/>
+            <size key="customSize" width="323" height="145"/>
             <connections>
                 <outlet property="awayTeamLabel" destination="Vf3-ay-586" id="6Fg-HQ-2o4"/>
+                <outlet property="containerView" destination="aib-nD-SDK" id="j5h-4T-Vw1"/>
+                <outlet property="favoriteButton" destination="gZG-Yc-bWs" id="anm-20-TyL"/>
                 <outlet property="homeTeamLabel" destination="pBy-5D-XhH" id="I7h-lZ-LzL"/>
                 <outlet property="timeLabel" destination="uA2-X2-vBp" id="znX-Dd-UpB"/>
             </connections>
-            <point key="canvasLocation" x="54" y="72"/>
+            <point key="canvasLocation" x="89.130434782608702" y="67.96875"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <image name="star-filled-template" width="13" height="12"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
