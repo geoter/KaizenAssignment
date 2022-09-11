@@ -43,7 +43,11 @@ final class SportsGamesDataFactory: SportsGamesDataFactoryProtocol {
                 }
                 favoriteBinderModels.append(binderModel)
             }
-            let sportEventsBinderModels = SportEventsBinderModel(sportID: model.sportId, events: favoriteBinderModels + normalBinderModels)
+            var totalModels = [SportEventBinderModel]()
+            totalModels.reserveCapacity(favoriteBinderModels.count + normalBinderModels.count)
+            totalModels.append(contentsOf: favoriteBinderModels)
+            totalModels.append(contentsOf: normalBinderModels)
+            let sportEventsBinderModels = SportEventsBinderModel(sportID: model.sportId, events: totalModels)
             binderModels.append(sportEventsBinderModels)
         }
         return binderModels
