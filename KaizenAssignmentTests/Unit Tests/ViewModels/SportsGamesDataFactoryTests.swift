@@ -22,5 +22,13 @@ class SportsGamesDataFactoryTests: XCTestCase {
         dataFactory.toggleCollapse(for: model)
         XCTAssertFalse(dataFactory.isCollapsed(model: model), "Expand did not work")
     }
+    
+    func testFavorites() throws {
+        let model = SportHeaderBinderModel(sportID: "BASK", sportName: "BASKETBALL", sportIconName: "BASK", isCollapsed: false)
+        dataFactory.toggleFavorites(for: model.sportID)
+        XCTAssertTrue(dataFactory.isFavorite(eventID: model.sportID), "Favorites add did not work")
+        dataFactory.toggleFavorites(for: model.sportID)
+        XCTAssertFalse(dataFactory.isFavorite(eventID: model.sportID), "Favorites remove did not work")
+    }
 
 }
