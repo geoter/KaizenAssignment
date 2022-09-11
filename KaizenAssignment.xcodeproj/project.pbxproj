@@ -50,6 +50,7 @@
 		62D8D22128CE1A210087AE9B /* SportsGamesViewModel_IntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D8D22028CE1A210087AE9B /* SportsGamesViewModel_IntegrationTests.swift */; };
 		62D8D22328CE1E5E0087AE9B /* SportsGamesDataFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D8D22228CE1E5E0087AE9B /* SportsGamesDataFactoryTests.swift */; };
 		62EF7F3028CE3CF2004D170F /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EF7F2F28CE3CF2004D170F /* UIViewExtension.swift */; };
+		62EF7F3328CE75A3004D170F /* CountDownLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EF7F3228CE75A3004D170F /* CountDownLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +118,7 @@
 		62D8D22028CE1A210087AE9B /* SportsGamesViewModel_IntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsGamesViewModel_IntegrationTests.swift; sourceTree = "<group>"; };
 		62D8D22228CE1E5E0087AE9B /* SportsGamesDataFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsGamesDataFactoryTests.swift; sourceTree = "<group>"; };
 		62EF7F2F28CE3CF2004D170F /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		62EF7F3228CE75A3004D170F /* CountDownLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -349,6 +351,7 @@
 		62D8D1FB28CD12740087AE9B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				62EF7F3128CE7592004D170F /* Custom Views */,
 				62C955A428CE2E5B002782B3 /* SportEventsCell */,
 				62D8D20C28CDF8640087AE9B /* SportHeaderTableViewCell.swift */,
 				62D8D20D28CDF8640087AE9B /* SportHeaderTableViewCell.xib */,
@@ -387,6 +390,14 @@
 				62D8D22228CE1E5E0087AE9B /* SportsGamesDataFactoryTests.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		62EF7F3128CE7592004D170F /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				62EF7F3228CE75A3004D170F /* CountDownLabel.swift */,
+			);
+			path = "Custom Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -538,6 +549,7 @@
 				62998A1A28CCEBBA002E9DAE /* UITableViewExtensions.swift in Sources */,
 				622C4C2F28CCB51600D39601 /* Request.swift in Sources */,
 				62998A1428CCEA7D002E9DAE /* BinderCell.swift in Sources */,
+				62EF7F3328CE75A3004D170F /* CountDownLabel.swift in Sources */,
 				622C4C3428CCB7FE00D39601 /* NetworkError.swift in Sources */,
 				62D8D21528CDF8CC0087AE9B /* SportEventsBinderModel.swift in Sources */,
 				622C4C2D28CCB50100D39601 /* Network.swift in Sources */,
