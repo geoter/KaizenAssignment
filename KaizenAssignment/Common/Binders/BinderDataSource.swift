@@ -8,7 +8,12 @@
 import Foundation
 import UIKit
 
+protocol BinderDataSourceDelegate: AnyObject {
+    func binderDataSource(_ tableView: UITableView, didSelect model: BinderModelConformer)
+}
+
 final class BinderDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
+    weak var binderDelegate: BinderDataSourceDelegate?
     
     private var dataList: [BinderModelConformer] = []
     private var binders: [BinderCellType] = []
@@ -40,8 +45,13 @@ final class BinderDataSource: NSObject, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = computeCell(tableView: tableView, indexPath: indexPath)
-        cell.setup(with: self.dataList[indexPath.row])
+        cell.setup(with: dataList[indexPath.row])
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard indexPath.row < dataList.count else { return }
+        binderDelegate?.binderDataSource(tableView, didSelect: dataList[indexPath.row])
     }
     
     // MARK:  Private Methods
@@ -53,7 +63,8 @@ final class BinderDataSource: NSObject, UITableViewDataSource, UITableViewDelega
     }
     
     private func computeCell(tableView: UITableView, indexPath: IndexPath) -> BinderCell {
-        let cellIdentifier = self.dataList[indexPath.row].getCellType().identifier
+        guard indexPath.row < dataList.count else { return BinderCell() } //TODO: create EmptyCell to show in this case
+        let cellIdentifier = dataList[indexPath.row].getCellType().identifier
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! BinderCell
         return cell
     }

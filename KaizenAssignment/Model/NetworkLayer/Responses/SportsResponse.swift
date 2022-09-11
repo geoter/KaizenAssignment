@@ -20,8 +20,8 @@ struct SportModel: Decodable {
 }
 
 struct SportEvent: Decodable {
-    let eventId: String //TODO: ask backend if its safe to convert it to Int to make comparisons faster
-    let sportId: String //TODO: ask backend if its safe to convert it to Int to make comparisons faster
+    let eventId: String //TODO: ask backend if its safe to convert it to Int to make comparisons faster (+ Heap allocation overhead)
+    let sportId: String //TODO: ask backend if its safe to convert it to Int to make comparisons faster (+ Heap allocation overhead)
     let eventName: String
     let eventStartTimestamp: Int //unix time
     

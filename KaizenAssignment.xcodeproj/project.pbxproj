@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		622C4BF728CCB34600D39601 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622C4BF628CCB34600D39601 /* AppDelegate.swift */; };
-		622C4BF928CCB34600D39601 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622C4BF828CCB34600D39601 /* SceneDelegate.swift */; };
-		622C4BFB28CCB34600D39601 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622C4BFA28CCB34600D39601 /* ViewController.swift */; };
 		622C4BFE28CCB34600D39601 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 622C4BFC28CCB34600D39601 /* Main.storyboard */; };
 		622C4C0028CCB34700D39601 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 622C4BFF28CCB34700D39601 /* Assets.xcassets */; };
 		622C4C0328CCB34700D39601 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 622C4C0128CCB34700D39601 /* LaunchScreen.storyboard */; };
@@ -36,6 +34,16 @@
 		62998A1428CCEA7D002E9DAE /* BinderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62998A1128CCEA7C002E9DAE /* BinderCell.swift */; };
 		62998A1A28CCEBBA002E9DAE /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62998A1928CCEBBA002E9DAE /* UITableViewExtensions.swift */; };
 		62998A1C28CCF17F002E9DAE /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62998A1B28CCF17F002E9DAE /* State.swift */; };
+		62D8D20728CDF0DB0087AE9B /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D8D20628CDF0DB0087AE9B /* Assets.swift */; };
+		62D8D20B28CDF7E20087AE9B /* SportHeaderBinderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D8D20A28CDF7E20087AE9B /* SportHeaderBinderModel.swift */; };
+		62D8D20E28CDF8640087AE9B /* SportHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D8D20C28CDF8640087AE9B /* SportHeaderTableViewCell.swift */; };
+		62D8D20F28CDF8640087AE9B /* SportHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62D8D20D28CDF8640087AE9B /* SportHeaderTableViewCell.xib */; };
+		62D8D21228CDF8A50087AE9B /* SportEventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D8D21028CDF8A50087AE9B /* SportEventsTableViewCell.swift */; };
+		62D8D21328CDF8A50087AE9B /* SportEventsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62D8D21128CDF8A50087AE9B /* SportEventsTableViewCell.xib */; };
+		62D8D21528CDF8CC0087AE9B /* SportEventsBinderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D8D21428CDF8CC0087AE9B /* SportEventsBinderModel.swift */; };
+		62D8D21828CE01A50087AE9B /* SportEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D8D21728CE01A50087AE9B /* SportEventsViewController.swift */; };
+		62D8D21A28CE07DF0087AE9B /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D8D21928CE07DF0087AE9B /* UINavigationControllerExtension.swift */; };
+		62D8D21C28CE0A660087AE9B /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D8D21B28CE0A660087AE9B /* UIColorExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,8 +66,6 @@
 /* Begin PBXFileReference section */
 		622C4BF328CCB34600D39601 /* KaizenAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KaizenAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		622C4BF628CCB34600D39601 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		622C4BF828CCB34600D39601 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		622C4BFA28CCB34600D39601 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		622C4BFD28CCB34600D39601 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		622C4BFF28CCB34700D39601 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		622C4C0228CCB34700D39601 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -89,6 +95,16 @@
 		62998A1128CCEA7C002E9DAE /* BinderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinderCell.swift; sourceTree = "<group>"; };
 		62998A1928CCEBBA002E9DAE /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
 		62998A1B28CCF17F002E9DAE /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		62D8D20628CDF0DB0087AE9B /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		62D8D20A28CDF7E20087AE9B /* SportHeaderBinderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportHeaderBinderModel.swift; sourceTree = "<group>"; };
+		62D8D20C28CDF8640087AE9B /* SportHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		62D8D20D28CDF8640087AE9B /* SportHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SportHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		62D8D21028CDF8A50087AE9B /* SportEventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportEventsTableViewCell.swift; sourceTree = "<group>"; };
+		62D8D21128CDF8A50087AE9B /* SportEventsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SportEventsTableViewCell.xib; sourceTree = "<group>"; };
+		62D8D21428CDF8CC0087AE9B /* SportEventsBinderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportEventsBinderModel.swift; sourceTree = "<group>"; };
+		62D8D21728CE01A50087AE9B /* SportEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportEventsViewController.swift; sourceTree = "<group>"; };
+		62D8D21928CE07DF0087AE9B /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
+		62D8D21B28CE0A660087AE9B /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,10 +158,11 @@
 				62998A1528CCEB87002E9DAE /* Extensions */,
 				62998A0D28CCEA47002E9DAE /* Common */,
 				62998A0728CCE98E002E9DAE /* ViewModel */,
+				62D8D20428CD13090087AE9B /* BinderModels */,
 				622C4C2B28CCB4F100D39601 /* Model */,
+				62D8D1FB28CD12740087AE9B /* Views */,
+				62D8D21628CE018C0087AE9B /* ViewControllers */,
 				622C4BF628CCB34600D39601 /* AppDelegate.swift */,
-				622C4BF828CCB34600D39601 /* SceneDelegate.swift */,
-				622C4BFA28CCB34600D39601 /* ViewController.swift */,
 				622C4BFC28CCB34600D39601 /* Main.storyboard */,
 				622C4BFF28CCB34700D39601 /* Assets.xcassets */,
 				622C4C0128CCB34700D39601 /* LaunchScreen.storyboard */,
@@ -277,6 +294,7 @@
 			children = (
 				62998A0E28CCEA74002E9DAE /* Binders */,
 				62998A1B28CCF17F002E9DAE /* State.swift */,
+				62D8D20628CDF0DB0087AE9B /* Assets.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -295,8 +313,46 @@
 			isa = PBXGroup;
 			children = (
 				62998A1928CCEBBA002E9DAE /* UITableViewExtensions.swift */,
+				62D8D21928CE07DF0087AE9B /* UINavigationControllerExtension.swift */,
+				62D8D21B28CE0A660087AE9B /* UIColorExtensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		62D8D1FB28CD12740087AE9B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				62D8D20C28CDF8640087AE9B /* SportHeaderTableViewCell.swift */,
+				62D8D20D28CDF8640087AE9B /* SportHeaderTableViewCell.xib */,
+				62D8D21028CDF8A50087AE9B /* SportEventsTableViewCell.swift */,
+				62D8D21128CDF8A50087AE9B /* SportEventsTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		62D8D20428CD13090087AE9B /* BinderModels */ = {
+			isa = PBXGroup;
+			children = (
+				62D8D20528CD132D0087AE9B /* SportsGames */,
+			);
+			path = BinderModels;
+			sourceTree = "<group>";
+		};
+		62D8D20528CD132D0087AE9B /* SportsGames */ = {
+			isa = PBXGroup;
+			children = (
+				62D8D20A28CDF7E20087AE9B /* SportHeaderBinderModel.swift */,
+				62D8D21428CDF8CC0087AE9B /* SportEventsBinderModel.swift */,
+			);
+			path = SportsGames;
+			sourceTree = "<group>";
+		};
+		62D8D21628CE018C0087AE9B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				62D8D21728CE01A50087AE9B /* SportEventsViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -404,6 +460,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				622C4C0328CCB34700D39601 /* LaunchScreen.storyboard in Resources */,
+				62D8D20F28CDF8640087AE9B /* SportHeaderTableViewCell.xib in Resources */,
+				62D8D21328CDF8A50087AE9B /* SportEventsTableViewCell.xib in Resources */,
 				622C4C0028CCB34700D39601 /* Assets.xcassets in Resources */,
 				622C4BFE28CCB34600D39601 /* Main.storyboard in Resources */,
 			);
@@ -433,21 +491,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				622C4C3728CCC15800D39601 /* Reachability.swift in Sources */,
+				62D8D20E28CDF8640087AE9B /* SportHeaderTableViewCell.swift in Sources */,
 				622C4C3F28CCC71A00D39601 /* SportsResponse.swift in Sources */,
-				622C4BFB28CCB34600D39601 /* ViewController.swift in Sources */,
+				62D8D21228CDF8A50087AE9B /* SportEventsTableViewCell.swift in Sources */,
 				622C4C3C28CCC68400D39601 /* SportsRequest.swift in Sources */,
 				622C4BF728CCB34600D39601 /* AppDelegate.swift in Sources */,
 				62998A1328CCEA7D002E9DAE /* BinderModel.swift in Sources */,
+				62D8D21A28CE07DF0087AE9B /* UINavigationControllerExtension.swift in Sources */,
 				62998A0C28CCE9DC002E9DAE /* SportsGamesViewModel.swift in Sources */,
 				62998A1A28CCEBBA002E9DAE /* UITableViewExtensions.swift in Sources */,
 				622C4C2F28CCB51600D39601 /* Request.swift in Sources */,
 				62998A1428CCEA7D002E9DAE /* BinderCell.swift in Sources */,
 				622C4C3428CCB7FE00D39601 /* NetworkError.swift in Sources */,
+				62D8D21528CDF8CC0087AE9B /* SportEventsBinderModel.swift in Sources */,
 				622C4C2D28CCB50100D39601 /* Network.swift in Sources */,
+				62D8D21C28CE0A660087AE9B /* UIColorExtensions.swift in Sources */,
 				622C4C3928CCC4CC00D39601 /* NetworkConfig.swift in Sources */,
 				62998A1C28CCF17F002E9DAE /* State.swift in Sources */,
+				62D8D20B28CDF7E20087AE9B /* SportHeaderBinderModel.swift in Sources */,
 				62998A1228CCEA7D002E9DAE /* BinderDataSource.swift in Sources */,
-				622C4BF928CCB34600D39601 /* SceneDelegate.swift in Sources */,
+				62D8D21828CE01A50087AE9B /* SportEventsViewController.swift in Sources */,
+				62D8D20728CDF0DB0087AE9B /* Assets.swift in Sources */,
 				62998A0A28CCE9C8002E9DAE /* SportsGamesDataFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -639,6 +703,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -648,7 +713,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -667,6 +732,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -676,7 +742,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
