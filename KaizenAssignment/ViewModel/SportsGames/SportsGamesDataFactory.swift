@@ -19,6 +19,7 @@ final class SportsGamesDataFactory: SportsGamesDataFactoryProtocol {
     func makeBinders(from models: [SportModel]?) -> [BinderModelConformer] {
         var binderModels = [BinderModelConformer]()
         models?.forEach { model in
+            //Header
             let isCollapsed = collapsedSports.contains(model.sportId)
             let headerBinderModel = SportHeaderBinderModel(sportID: model.sportId,
                                                            sportName: model.sportName,
@@ -26,8 +27,12 @@ final class SportsGamesDataFactory: SportsGamesDataFactoryProtocol {
                                                            isCollapsed: isCollapsed)
             binderModels.append(headerBinderModel)
             guard isCollapsed == false else { return }
-            let sportEventsBinderModel = SportEventsBinderModel()
-            binderModels.append(sportEventsBinderModel)
+            //Events
+            let eventBindelModels = model.events.map { event in
+                SportEventBinderModel(eventID: event.eventId, sportID: event.sportId, caption: event.eventName, eventStartTimestamp: event.eventStartTimestamp)
+            }
+            let sportEventsBinderModels = SportEventsBinderModel(events: eventBindelModels)
+            binderModels.append(sportEventsBinderModels)
         }
         return binderModels
     }

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SportEventCollectionViewCell" customModule="KaizenAssignment" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="274" height="154"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="274" height="154"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aib-nD-SDK">
+                        <rect key="frame" x="0.0" y="0.0" width="274" height="154"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hz6-Ia-An8">
+                                <rect key="frame" x="8" y="95" width="258" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBy-5D-XhH">
+                                        <rect key="frame" x="109.5" y="0.0" width="39.5" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vf3-ay-586">
+                                        <rect key="frame" x="109.5" y="24.5" width="39.5" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uA2-X2-vBp">
+                                <rect key="frame" x="117.5" y="15" width="39.5" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZG-Yc-bWs">
+                                <rect key="frame" x="126" y="44.5" width="22" height="40.5"/>
+                                <color key="tintColor" systemColor="systemYellowColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="star.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="favoritedTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="E8N-yV-cAQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="hz6-Ia-An8" secondAttribute="trailing" constant="8" id="1BI-rP-pLh"/>
+                            <constraint firstItem="uA2-X2-vBp" firstAttribute="top" secondItem="aib-nD-SDK" secondAttribute="top" constant="15" id="8TK-mT-AVe"/>
+                            <constraint firstAttribute="bottom" secondItem="hz6-Ia-An8" secondAttribute="bottom" constant="15" id="I1z-Tg-2vd"/>
+                            <constraint firstItem="gZG-Yc-bWs" firstAttribute="centerX" secondItem="aib-nD-SDK" secondAttribute="centerX" id="Iao-LH-Sae"/>
+                            <constraint firstItem="hz6-Ia-An8" firstAttribute="top" secondItem="gZG-Yc-bWs" secondAttribute="bottom" constant="10" id="d1C-P8-CWv"/>
+                            <constraint firstItem="hz6-Ia-An8" firstAttribute="leading" secondItem="aib-nD-SDK" secondAttribute="leading" constant="8" id="qgE-nv-rJj"/>
+                            <constraint firstItem="uA2-X2-vBp" firstAttribute="centerX" secondItem="aib-nD-SDK" secondAttribute="centerX" id="quZ-XF-noo"/>
+                            <constraint firstItem="gZG-Yc-bWs" firstAttribute="top" secondItem="uA2-X2-vBp" secondAttribute="bottom" constant="10" id="ydH-5o-8Eg"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="aib-nD-SDK" secondAttribute="bottom" id="Zi8-ft-QnD"/>
+                <constraint firstAttribute="trailing" secondItem="aib-nD-SDK" secondAttribute="trailing" id="kmT-qf-fqR"/>
+                <constraint firstItem="aib-nD-SDK" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="oI3-OL-939"/>
+                <constraint firstItem="aib-nD-SDK" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="unq-T9-SRK"/>
+            </constraints>
+            <size key="customSize" width="274" height="154"/>
+            <connections>
+                <outlet property="awayTeamLabel" destination="Vf3-ay-586" id="6Fg-HQ-2o4"/>
+                <outlet property="homeTeamLabel" destination="pBy-5D-XhH" id="I7h-lZ-LzL"/>
+                <outlet property="timeLabel" destination="uA2-X2-vBp" id="znX-Dd-UpB"/>
+            </connections>
+            <point key="canvasLocation" x="54" y="72"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
