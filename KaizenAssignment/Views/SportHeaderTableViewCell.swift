@@ -15,6 +15,7 @@ final class SportHeaderTableViewCell: BinderCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
+        accessibilityIdentifier = "\(Self.self)"
     }
     
     override func setup(with data: BinderModelConformer) {

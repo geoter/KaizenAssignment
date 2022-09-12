@@ -13,7 +13,11 @@ protocol NetworkProtocol {
 }
 
 final class Network: NetworkProtocol {
-    static let shared: Network = {
+    static let shared: NetworkProtocol = {
+        guard !ProcessInfo.processInfo.arguments.contains(EnvArgs.NetworkMock) else { //used in UITests
+            let jsonData: Data = FileReader().read(from: "sports_response.json")!
+            return NetworkMock(stubResponse: jsonData)
+        }
         let config = NetworkConfig(scheme: "https", host: "618d3aa7fe09aa001744060a.mockapi.io",
                                    reachability: .shared, session: .shared)
         return Network(config: config)
