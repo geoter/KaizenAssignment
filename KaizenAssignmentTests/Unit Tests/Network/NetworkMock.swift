@@ -6,7 +6,6 @@
 //
 
 import Foundation
-@testable import KaizenAssignment
 
 final class NetworkMock: NetworkProtocol {
     var config: NetworkConfig
