@@ -20,11 +20,11 @@ struct SportEventBinderModel {
     let isFavorite: Bool
     
     var homeCompetitor: String? {
-        caption.components(separatedBy: "-").first
+        caption.components(separatedBy: "-").first?.trimmingCharacters(in: .whitespacesAndNewlines)
     }
     
     var awayCompetitor: String? {
-        caption.components(separatedBy: "-").last
+        caption.components(separatedBy: "-").last?.trimmingCharacters(in: .whitespacesAndNewlines)
     }
 }
 
