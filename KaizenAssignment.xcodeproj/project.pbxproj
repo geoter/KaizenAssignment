@@ -39,6 +39,7 @@
 		62998A1428CCEA7D002E9DAE /* BinderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62998A1128CCEA7C002E9DAE /* BinderCell.swift */; };
 		62998A1A28CCEBBA002E9DAE /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62998A1928CCEBBA002E9DAE /* UITableViewExtensions.swift */; };
 		62998A1C28CCF17F002E9DAE /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62998A1B28CCF17F002E9DAE /* State.swift */; };
+		62ADEB3528CF3AD4003EDE5B /* RandomTextLabel in Frameworks */ = {isa = PBXBuildFile; productRef = 62ADEB3428CF3AD4003EDE5B /* RandomTextLabel */; };
 		62C955A728CE2E7F002782B3 /* SportEventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C955A528CE2E7F002782B3 /* SportEventCollectionViewCell.swift */; };
 		62C955A828CE2E7F002782B3 /* SportEventCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62C955A628CE2E7F002782B3 /* SportEventCollectionViewCell.xib */; };
 		62C955AA28CE2EFD002782B3 /* UICollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C955A928CE2EFD002782B3 /* UICollectionViewExtensions.swift */; };
@@ -135,6 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62ADEB3528CF3AD4003EDE5B /* RandomTextLabel in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +437,9 @@
 			dependencies = (
 			);
 			name = KaizenAssignment;
+			packageProductDependencies = (
+				62ADEB3428CF3AD4003EDE5B /* RandomTextLabel */,
+			);
 			productName = KaizenAssignment;
 			productReference = 622C4BF328CCB34600D39601 /* KaizenAssignment.app */;
 			productType = "com.apple.product-type.application";
@@ -507,6 +512,9 @@
 				Base,
 			);
 			mainGroup = 622C4BEA28CCB34600D39601;
+			packageReferences = (
+				62ADEB3328CF3AD4003EDE5B /* XCRemoteSwiftPackageReference "RandomTextLabel" */,
+			);
 			productRefGroup = 622C4BF428CCB34600D39601 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -940,6 +948,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		62ADEB3328CF3AD4003EDE5B /* XCRemoteSwiftPackageReference "RandomTextLabel" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/geoter/RandomTextLabel.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		62ADEB3428CF3AD4003EDE5B /* RandomTextLabel */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 62ADEB3328CF3AD4003EDE5B /* XCRemoteSwiftPackageReference "RandomTextLabel" */;
+			productName = RandomTextLabel;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 622C4BEB28CCB34600D39601 /* Project object */;
 }
